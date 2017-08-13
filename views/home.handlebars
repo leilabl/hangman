@@ -1,0 +1,35 @@
+<h1>Hangman Game</h1>
+<form action="/restart" method="post">
+    <button type="submit">Restart Game</button>
+</form>
+{{#if won}}
+<div>You Win!!!</div>
+{{else}}
+<div>Guesses Remaining: {{guessesRemaining}}</div>
+{{/if}}
+<div>
+    <ul>
+        {{#each secretWordChars}}
+        <li>{{#if this.isGuessed}}{{this.value}}{{/if}}</li>
+        {{/each}}
+    </ul>
+</div>
+<div>
+{{#unless won}}
+<form action="/" method="post">
+    <ul>
+        {{#each letters}}
+        <button
+            type="submit"
+            name="guess"
+            value={{@index}}
+            {{#if this.isGuessed}}disabled{{/if}}
+        >
+        {{this.value}}
+        </button>
+        {{/each}}
+    </ul>
+</form>
+{{/unless}}
+</div>
+
