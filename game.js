@@ -63,6 +63,5 @@ module.exports = class Hangman {
             this.won = true;
         }
     }
-
 }
 

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "swagger project test"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +13,8 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "express-handlebars": "^3.0.0",
-    "mustache": "^2.3.0",
-    "nodemon": "^1.11.0"
+    "express-session": "^1.15.5",
+    "nodemon": "^1.11.0",
+    "swagger-express-mw": "^0.1.0"
   }
 }
