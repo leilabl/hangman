@@ -25,9 +25,8 @@ paths:
       description: Posts the letter selected by the user and triggers side effects
       operationId: pickLetter
       parameters:
-      - name: body
+      - name: guess
         in: body
-        required: true
         schema:
           type: string
       responses:

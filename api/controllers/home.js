@@ -26,7 +26,8 @@ function game(req, res) {
 }
 
 function pickLetter(req, res) {
-    console.log(req)
+    //console.log('params', req.params)
+    console.log(req.body)
     const guess = req.body.guess;
     console.log(guess)
     hangman.handleGuess(guess);
