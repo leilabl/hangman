@@ -45,7 +45,7 @@ module.exports = class Hangman {
         const currentMatches = this.found.size;
         const charGuessed = this.letters[guess].value;
         for (let i = 0; i < this.secretWordChars.length; i++) {
-            if(this.secretWordChars[i].value === charGuessed) {
+            if (this.secretWordChars[i].value === charGuessed) {
                 this.secretWordChars[i].isGuessed = true;
                 this.found.add(this.secretWordChars[i].value);
             }
