@@ -37,6 +37,6 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
 
   swaggerExpress.register(app);
 
-  const port = 3000;
+  const port = 4000;
   app.listen(port, () => console.log(`Listening on port ${port}`));
 });
